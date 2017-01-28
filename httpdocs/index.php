@@ -14,7 +14,7 @@
             foreach($projectDirs as $dir): ?>
                 <?php if(in_array('index.php', scanner($dir))): ?>
                 <li>
-                    <a href="/<?php echo $dir; ?>">Project <?php echo $dir; ?></a>
+                    <a href="/<?php echo $dir; ?>">Assignment <?php echo $dir; ?></a>
                 </li>
                 <?php endif; ?>
         <?php endforeach; ?>
