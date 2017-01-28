@@ -15,12 +15,12 @@
         <main>
             <h1>PHP And HTML</h1>
             <p>
-                Learning HTML is fun.<br>
-                Learning HTML is very easy.
+                Learning HTML is fun<br>
+                Learning HTML is very easy
             </p>
             <p class="php">
-                <?php echo "Learning PHP is fun.";?><br>
-                <?php echo "Learning PHP is very easy.";?>
+                <?php echo "Learning PHP is fun";?><br>
+                <?php echo "Learning PHP is very easy";?>
             </p>
         </main>
     </body>
