@@ -8,7 +8,7 @@
         <ul>
         <?php
             function scanner( $dir = '.', $exceptions = array() ) {
-                return array_diff( scandir('.'), array_merge( array('..', '.'), $exceptions ) );
+                return array_diff( scandir('.'), array_merge( array('..', '.', '.DS_Store'), $exceptions ) );
             }
             $projectDirs = scanner('.', array('index.php'));
             foreach($projectDirs as $dir): ?>
