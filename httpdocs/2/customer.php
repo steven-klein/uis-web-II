@@ -10,48 +10,59 @@
             <div class="row">
                 <div class="column column-75">
                     <h1>Customer Record</h1>
-                    <?php if(isset($_POST) && !empty($_POST)): ?>
-                    <table>
-                        <tbody>
-                            <tr>
-                                <td>Name: </td>
-                                <td><?php echo !empty($_POST["name"]) ? $_POST["name"] : ""; ?></td>
-                            </tr>
-                            <tr>
-                                <td>Address: </td>
-                                <td><?php echo isset($_POST["address"]) ? $_POST["address"] : ""; ?></td>
-                            </tr>
-                            <tr>
-                                <td>City: </td>
-                                <td><?php echo isset($_POST["city"]) ? $_POST["city"] : ""; ?></td>
-                            </tr>
-                            <tr>
-                                <td>State: </td>
-                                <td><?php echo isset($_POST["state"]) ? $_POST["state"] : ""; ?></td>
-                            </tr>
-                            <tr>
-                                <td>Zip Code: </td>
-                                <td><?php echo isset($_POST["zipcode"]) ? $_POST["zipcode"] : ""; ?></td>
-                            </tr>
-                            <tr>
-                                <td>Email: </td>
-                                <td><?php echo isset($_POST["email"]) ? $_POST["email"] : ""; ?></td>
-                            </tr>
-                            <tr>
-                                <td>Customer Type: </td>
-                                <td><?php echo isset($_POST["customer"]) ? $_POST["customer"] : ""; ?></td>
-                            </tr>
-                            <tr>
-                                <td>Notes: </td>
-                                <td><?php echo isset($_POST["notes"]) ? $_POST["notes"] : ""; ?></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                    <?php else: ?>
-                        <p>
-                            No customer record available!
-                        </p>
-                    <?php endif; ?>
+                    <?php
+                        $name = !empty($_POST["name"]) ? $_POST["name"] : "";
+                        $address = isset($_POST["address"]) ? $_POST["address"] : "";
+                        $city = isset($_POST["city"]) ? $_POST["city"] : "";
+                        $state = isset($_POST["state"]) ? $_POST["state"] : "";
+                        $zipcode = isset($_POST["zipcode"]) ? $_POST["zipcode"] : "";
+                        $email = isset($_POST["email"]) ? $_POST["email"] : "";
+                        $type = isset($_POST["customer"]) ? $_POST["customer"] : "";
+                        $notes = isset($_POST["notes"]) ? $_POST["notes"] : "";
+                        if(isset($_POST) && !empty($_POST))
+                        {
+                            print "<table>
+                                    <tbody>
+                                        <tr>
+                                            <td>Name: </td>
+                                            <td>$name</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Address: </td>
+                                            <td>$address</td>
+                                        </tr>
+                                        <tr>
+                                            <td>City: </td>
+                                            <td>$city</td>
+                                        </tr>
+                                        <tr>
+                                            <td>State: </td>
+                                            <td>$state</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Zip Code: </td>
+                                            <td>$zipcode</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Email: </td>
+                                            <td>$email</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Customer Type: </td>
+                                            <td>$type</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Notes: </td>
+                                            <td>$notes</td>
+                                        </tr>
+                                    </tbody>
+                                </table>";
+                        }
+                        else
+                        {
+                            echo "<p>No customer record available!</p>";
+                        }
+                    ?>
                 </div>
             </div>
         </main>
