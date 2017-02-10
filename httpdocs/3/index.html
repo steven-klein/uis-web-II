@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Assignment 3 | Volume Calculator</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css" />
+    </head>
+    <body>
+        <main class="container">
+            <div class="row">
+                <div class="column column-75">
+                    <h1>Volume Calculator</h1>
+                    <form action="calc.php" method="post">
+                        <fieldset>
+                            <legend>Calculate Volume of Rectangle</legend>
+                            <label for="rectangleWidth">Width:</label>
+                            <input type="number" name="rectangleWidth" required/>
+                            <label for="rectangleLength">Length:</label>
+                            <input type="number" name="rectangleLength" required/>
+                            <label for="rectangleHeight">Height:</label>
+                            <input type="number" name="rectangleHeight" required/>
+                        </fieldset>
+                        <fieldset>
+                            <legend>Calculate Volume of a Cone</legend>
+                            <label for="coneRadius">Radius:</label>
+                            <input type="number" name="coneRadius" required/>
+                            <label for="coneHeight">Height:</label>
+                            <input type="number" name="coneHeight" required/>
+                        </fieldset>
+                        <fieldset>
+                            <input type="submit" value="submit" />
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>
