@@ -4,19 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npm-run-all --serial clean copy js css",
-    "clean": "npm-run-all --parallel clean:*",
-    "clean:assets": "del-cli httpdocs/assets",
-    "copy": "npm-run-all --parallel copy:*",
-    "copy:img": "copy 'resources/assets/img/**/*.+(jpg|jpeg|gif|png|svg)' httpdocs/assets/img",
-    "css": "postcss -c postcss.config.js",
-    "deploy:prod": "cross-env NODE_ENV=production npm run build && brkstn-sync prod up",
-    "deploy:dev": "cross-env NODE_ENV=production npm run build && brkstn-sync dev up",
-    "js": "rollup -c rollup.config.js",
-    "postversion": "git push && git push --tags",
     "serve": "browser-sync start -c browsersync.config.js",
-    "test": "cross-env NODE_ENV=production npm run build",
-    "watch": "npm-run-all clean copy js css --parallel \"js -- --watch\" \"css -- --watch\" serve"
+    "watch": "npm-run-all --parallel serve"
   },
   "keywords": [],
   "author": "",
